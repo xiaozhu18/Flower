@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Kind</title>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="../img/logo.jpg" />
+<link rel="stylesheet" href="../css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../css/bootstrap-responsive.css" type="text/css" media="screen">  
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<link rel="stylesheet" href="../css/kind.css" type="text/css" media="screen">      
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen">
+<script type="text/javascript" src="../js/jquery.js"></script>  
+<script type="text/javascript" src="../js/superfish.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.min.js"></script>
+<script>
+$(document).ready(function() {
+
+});
+$(window).load(function() {
+	// isotop
+	var $container = $('#isotope-items'),
+		$optionSet = $('#isotope-options'), 
+	    $optionSets = $('#isotope-filters'), 
+	    $optionLinks = $optionSets.find('a'); 
+    $container.isotope({ 
+        filter: '*',
+        layoutMode: 'fitRows'
+    });  
+   	$optionLinks.click(function(){ 
+   		var $this = $(this); 
+    	// don't proceed if already selected 
+		if ( $this.hasClass('selected') ) { 
+			return false; 
+		}    		
+   		$optionSet.find('.selected').removeClass('selected'); 
+   		$this.addClass('selected');
+
+        var selector = $(this).attr('data-filter'); 
+        $container.isotope({ 
+            filter: selector            
+        }); 
+      	return false; 
+    });    	
+	$(window).on("resize", function( event ) {	
+		$container.isotope('reLayout');		
+	});		
+
+	// touchTouch
+	$('.thumb-isotope .thumbnail a').touchTouch();
+
+}); //
+</script>		
+</head>
+
+<body>
+	<div id="main">
+		<div class="top1">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+					<div class="top1_inner">
+						<header><div class="logo_wrapper"><a href="kind.html" class="logo"><img src="../imglogo.png" alt=""></a></div></header>					
+						<div class="search-form-wrapper clearfix">
+							<form id="search-form"  method="get" accept-charset="utf-8" class="navbar-form" >
+								<input type="text" name="s" placeholder="search" />
+								<a href="#"></a>
+							</form>	
+						</div>
+							<div class="menu_wrapper">
+								<div class="arr_left"></div>	
+								<div class="arr_right"></div>
+								<div class="navbar navbar_">
+								<div class="nav-collapse nav-collapse_ collapse">
+									<ul class="nav sf-menu clearfix">
+										<li ><a href="../kind.html">Florist首页</a></li>
+										<li class="sub-menu sub-menu-1 "><a href="about.html">关于我们</a>
+										<ul>
+										<li><a href="about.html">我们的简介</a></li>		
+										<li><a href="about.html">我们的任务</a></li>						
+										<li><a href="about.html">我们的发展</a></li>						
+										
+									</ul>						
+										</li>
+										<li><a href="serve.html">服务</a></li>
+										<li class="active"><a href="kind3.html">花的种类</a></li>
+										<li><a href="price.html">价格</a></li>
+										<li><a href="#####">留言板</a></li>											
+									</ul>
+								</div>
+							</div>	
+						</div>
+					<div class="breadcrumbs1">
+					<div class="breadcrumbs1_inner"><a href="../kind.html">首页</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;花的种类</div>	
+					</div>
+				</div>	
+			</div>	
+		</div>	
+	</div>	
+</div>
+
+<div id="content">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div id="content_inner">
+					<div class="row">
+					<div class="span12">
+					<div id="isotope-options">
+					    <ul id="isotope-filters" class="clearfix">
+					        <li><a href="#" class="selected" data-filter="*">全部种类</a></li> 
+					        <li><a href="#" data-filter=".isotope-filter1">种类一</a></li> 
+					        <li><a href="#" data-filter=".isotope-filter2">种类二</a></li> 
+					        <li><a href="#" data-filter=".isotope-filter3">种类三</a></li> 	             
+					    </ul>            
+					</div>	
+					<ul class="thumbnails" id="isotope-items">		  
+					    <li class="span3 isotope-element isotope-filter1">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery01.jpg">
+										<figure>
+											<img src="../img/gallery01.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter2">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery02.jpg">
+										<figure>
+											<img src="../img/gallery02.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。	
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter3">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery03.jpg">
+										<figure>
+											<img src="../img/gallery03.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter1">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery04.jpg">
+										<figure>
+											<img src="../img/gallery04.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter2">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery05.jpg">
+										<figure>
+											<img src="../img/gallery05.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter3">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery06.jpg">
+										<figure>
+											<img src="../img/gallery06.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter1">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery07.jpg">
+										<figure>
+											<img src="../img/gallery07.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter2">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery08.jpg">
+										<figure>
+											<img src="../img/gallery08.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter3">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery09.jpg">
+										<figure>
+											<img src="../img/gallery09.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter1">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery10.jpg">
+										<figure>
+											<img src="../img/gallery10.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter2">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery11.jpg">
+										<figure>
+											<img src="../img/gallery11.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>
+					    <li class="span3 isotope-element isotope-filter3">
+							<div class="thumb-isotope">
+								<div class="thumbnail clearfix">
+									<a href="../img/gallery12.jpg">
+										<figure>
+											<img src="../img/gallery12.jpg" alt=""><em></em>
+										</figure>
+										<div class="caption">							
+											洛姆·伊普苏姆·多洛坐在阿梅特身边，奉献给了埃利特。
+										</div>
+									</a>				
+								</div>
+							</div>
+					    </li>    
+					</ul>
+					</div>
+				</div>	
+			</div>	
+		</div>	
+	</div>	
+</div>	
+</div>
+<footer>
+<div class="bot1">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="bot1_inner">
+					<div class="row">
+						<div class="span3">
+							<div class="bot1_title">关于我们</div>
+							<ul class="ul0">
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							</ul>
+						</div>
+						<div class="span3">
+							<div class="bot1_title">好的主意</div>
+							<ul class="ul0">
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							</ul>
+						</div>
+						<div class="span3">
+							<div class="bot1_title">链接</div>
+							<ul class="ul0">
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							  <li><a href="#">baidu</a></li>
+							</ul>
+						</div>
+						<div class="span3">
+							<div class="bot1_title">版权</div>
+							<footer><div class="copyright">Copyright GRIDGUM © 2019. All rights reserved.</div></footer>
+							<div class="social_wrapper">
+								<ul class="social clearfix">
+								    <li><a href="#"><img src="../img/social_ic1.png"></a></li>
+								    <li><a href="#"><img src="../img/social_ic2.png"></a></li>
+								    <li><a href="#"><img src="../img/social_ic3.png"></a></li>		    
+								</ul>
+							</div>
+						</div>	
+					</div>
+				</div>	
+				</div>	
+			</div>	
+		</div>	
+	</div>
+</footer>
+	
+</div>
+</body>
+</html>
